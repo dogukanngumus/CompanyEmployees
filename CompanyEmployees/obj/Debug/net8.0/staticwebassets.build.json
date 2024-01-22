@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "f7GL0edqUokVXYfFkOMjKTJ3JiG0TvaaB/PxA7clvZA=",
+  "Source": "CompanyEmployees",
+  "BasePath": "_content/CompanyEmployees",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CompanyEmployees/wwwroot",
+      "Source": "CompanyEmployees",
+      "ContentRoot": "/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/wwwroot/",
+      "BasePath": "_content/CompanyEmployees",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
