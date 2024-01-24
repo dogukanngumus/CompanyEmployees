@@ -1,0 +1,16 @@
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/bin/Debug/net8.0/Repositories.deps.json
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/bin/Debug/net8.0/Repositories.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/bin/Debug/net8.0/Repositories.pdb
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/bin/Debug/net8.0/Entities.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/bin/Debug/net8.0/Entities.pdb
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.csproj.AssemblyReference.cache
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.AssemblyInfoInputs.cache
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.AssemblyInfo.cs
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.csproj.CoreCompileInputs.cache
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.sourcelink.json
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.csproj.CopyComplete
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/refint/Repositories.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.pdb
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/ref/Repositories.dll

@@ -1,15 +1,12 @@
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/CompanyEmployees.Presentation.deps.json
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/CompanyEmployees.Presentation.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/CompanyEmployees.Presentation.pdb
-/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/Contracts.dll
-/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/Contracts.pdb
-/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.csproj.AssemblyReference.cache
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.GeneratedMSBuildEditorConfig.editorconfig
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.AssemblyInfoInputs.cache
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.AssemblyInfo.cs
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.csproj.CoreCompileInputs.cache
-/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.csproj.CopyComplete
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/refint/CompanyEmployees.Presentation.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.pdb
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/ref/CompanyEmployees.Presentation.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.sourcelink.json

@@ -90,6 +90,9 @@
               },
               "/Users/dogukngumus/Projects/CompanyEmployees/LoggerService/LoggerService.csproj": {
                 "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/LoggerService/LoggerService.csproj"
+              },
+              "/Users/dogukngumus/Projects/CompanyEmployees/Repositories/Repositories.csproj": {
+                "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Repositories/Repositories.csproj"
               }
             }
           }
@@ -105,6 +108,12 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.1, )"
             },
@@ -144,6 +153,59 @@
         "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Contracts/Contracts.csproj",
         "packagesPath": "/Users/dogukngumus/.nuget/packages/",
         "outputPath": "/Users/dogukngumus/Projects/CompanyEmployees/Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dogukngumus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/dogukngumus/Projects/CompanyEmployees/Entities/Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dogukngumus/Projects/CompanyEmployees/Entities/Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Entities/Entities.csproj",
+        "packagesPath": "/Users/dogukngumus/.nuget/packages/",
+        "outputPath": "/Users/dogukngumus/Projects/CompanyEmployees/Entities/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/dogukngumus/.nuget/NuGet/NuGet.Config"
@@ -230,6 +292,76 @@
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[5.3.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/dogukngumus/Projects/CompanyEmployees/Repositories/Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dogukngumus/Projects/CompanyEmployees/Repositories/Repositories.csproj",
+        "projectName": "Repositories",
+        "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Repositories/Repositories.csproj",
+        "packagesPath": "/Users/dogukngumus/.nuget/packages/",
+        "outputPath": "/Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dogukngumus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/dogukngumus/Projects/CompanyEmployees/Contracts/Contracts.csproj": {
+                "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Contracts/Contracts.csproj"
+              },
+              "/Users/dogukngumus/Projects/CompanyEmployees/Entities/Entities.csproj": {
+                "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Entities/Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [

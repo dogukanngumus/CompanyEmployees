@@ -13,3 +13,4 @@
 /Users/dogukngumus/Projects/CompanyEmployees/LoggerService/obj/Debug/net8.0/refint/LoggerService.dll
 /Users/dogukngumus/Projects/CompanyEmployees/LoggerService/obj/Debug/net8.0/LoggerService.pdb
 /Users/dogukngumus/Projects/CompanyEmployees/LoggerService/obj/Debug/net8.0/ref/LoggerService.dll
+/Users/dogukngumus/Projects/CompanyEmployees/LoggerService/obj/Debug/net8.0/LoggerService.sourcelink.json
