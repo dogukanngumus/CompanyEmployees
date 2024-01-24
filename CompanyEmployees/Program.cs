@@ -11,6 +11,7 @@ LogManager.Setup().LoadConfigurationFromFile();
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLoggerService();
+builder.Services.ConfigureRepositoryManager();
 #endregion
 
 var app = builder.Build();
