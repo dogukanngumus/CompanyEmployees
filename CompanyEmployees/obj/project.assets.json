@@ -1665,6 +1665,30 @@
         "runtime": {
           "bin/placeholder/Repositories.dll": {}
         }
+      },
+      "Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Service.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.dll": {}
+        }
+      },
+      "Service.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Service.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.Contracts.dll": {}
+        }
       }
     }
   },
@@ -4586,6 +4610,16 @@
       "type": "project",
       "path": "../Repositories/Repositories.csproj",
       "msbuildProject": "../Repositories/Repositories.csproj"
+    },
+    "Service/1.0.0": {
+      "type": "project",
+      "path": "../Service/Service.csproj",
+      "msbuildProject": "../Service/Service.csproj"
+    },
+    "Service.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Service.Contracts/Service.Contracts.csproj",
+      "msbuildProject": "../Service.Contracts/Service.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4596,6 +4630,8 @@
       "Microsoft.AspNetCore.OpenApi >= 8.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.1",
       "Repositories >= 1.0.0",
+      "Service >= 1.0.0",
+      "Service.Contracts >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -4635,6 +4671,12 @@
             },
             "/Users/dogukngumus/Projects/CompanyEmployees/Repositories/Repositories.csproj": {
               "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Repositories/Repositories.csproj"
+            },
+            "/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/Service.Contracts.csproj": {
+              "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/Service.Contracts.csproj"
+            },
+            "/Users/dogukngumus/Projects/CompanyEmployees/Service/Service.csproj": {
+              "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Service/Service.csproj"
             }
           }
         }
