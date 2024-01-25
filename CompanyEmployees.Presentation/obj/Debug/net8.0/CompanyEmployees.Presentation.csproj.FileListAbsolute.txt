@@ -10,3 +10,9 @@
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.pdb
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/ref/CompanyEmployees.Presentation.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.sourcelink.json
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/Service.Contracts.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/Shared.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/Service.Contracts.pdb
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/Shared.pdb
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.csproj.AssemblyReference.cache
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.csproj.CopyComplete

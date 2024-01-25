@@ -14,3 +14,5 @@
 /Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/refint/Repositories.dll
 /Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/Repositories.pdb
 /Users/dogukngumus/Projects/CompanyEmployees/Repositories/obj/Debug/net8.0/ref/Repositories.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/bin/Debug/net8.0/Contracts.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Repositories/bin/Debug/net8.0/Contracts.pdb

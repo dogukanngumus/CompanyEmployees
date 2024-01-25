@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "pUBxmpzuBd2GjHDVcTSAmGsHJ2JhAZtw12xVSBU7zHCSjCQZMGnd/h65Gbz+O1eWh3pzgDHG1m7ZRldxLoj85A==",
+  "dgSpecHash": "JNPr7WSb5Pu31SF+UFgA9Ee5wLCshIuNxKgUJGCjDZM/91q2ftUZN18kjxd9EKmcJMlkc+0KAtxgtXB2rZgoxQ==",
   "success": true,
   "projectFilePath": "/Users/dogukngumus/Projects/CompanyEmployees/Service/Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/dogukngumus/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

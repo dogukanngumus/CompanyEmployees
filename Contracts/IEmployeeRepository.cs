@@ -1,6 +1,9 @@
-﻿namespace Contracts;
+﻿using Entities.Models;
+
+namespace Contracts;
 
 public interface IEmployeeRepository
 {
-
+    Task<IEnumerable<Employee>> GetEmployeesAsync(Guid companyId, bool trackChanges);
+    Task<Employee> GetEmployeeAsync(Guid companyId, Guid employeeId, bool trackChanges);
 }

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "c8OghrBC67HA+BEVxuJa2eZIfewMeTsnWbvoBCWAr1YMkkGIN3kcbUanXxjo1kbflIoSmOEpPS4i8u9+6y26WQ==",
+  "dgSpecHash": "KHx3XUBTXKeIH2peE1pRkBoSXSLVWhT/0qFZ/EYApT7V7wtpvLdCX8V9etvTcvxOaGsTmC3//Yv+thXzj847rQ==",
   "success": true,
   "projectFilePath": "/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/CompanyEmployees.csproj",
   "expectedPackageFiles": [
+    "/Users/dogukngumus/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
@@ -14,7 +16,7 @@
     "/Users/dogukngumus/.nuget/packages/microsoft.codeanalysis.csharp/4.5.0/microsoft.codeanalysis.csharp.4.5.0.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/microsoft.codeanalysis.csharp.workspaces/4.5.0/microsoft.codeanalysis.csharp.workspaces.4.5.0.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/microsoft.codeanalysis.workspaces.common/4.5.0/microsoft.codeanalysis.workspaces.common.4.5.0.nupkg.sha512",
-    "/Users/dogukngumus/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/microsoft.data.sqlclient/5.1.1/microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.1.0/microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/microsoft.entityframeworkcore/8.0.1/microsoft.entityframeworkcore.8.0.1.nupkg.sha512",

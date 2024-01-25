@@ -1,0 +1,16 @@
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/bin/Debug/net8.0/Service.Contracts.deps.json
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/bin/Debug/net8.0/Service.Contracts.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/bin/Debug/net8.0/Service.Contracts.pdb
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/bin/Debug/net8.0/Shared.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/bin/Debug/net8.0/Shared.pdb
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.csproj.AssemblyReference.cache
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.AssemblyInfoInputs.cache
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.AssemblyInfo.cs
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.csproj.CoreCompileInputs.cache
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.sourcelink.json
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.csproj.CopyComplete
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/refint/Service.Contracts.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.pdb
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/ref/Service.Contracts.dll
