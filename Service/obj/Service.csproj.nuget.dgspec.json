@@ -28,6 +28,9 @@
             "projectReferences": {
               "/Users/dogukngumus/Projects/CompanyEmployees/Entities/Entities.csproj": {
                 "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Entities/Entities.csproj"
+              },
+              "/Users/dogukngumus/Projects/CompanyEmployees/Shared/Shared.csproj": {
+                "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Shared/Shared.csproj"
               }
             }
           }
@@ -136,6 +139,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "/Users/dogukngumus/Projects/CompanyEmployees/Entities/Entities.csproj": {
+                "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Entities/Entities.csproj"
+              },
               "/Users/dogukngumus/Projects/CompanyEmployees/Shared/Shared.csproj": {
                 "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Shared/Shared.csproj"
               }

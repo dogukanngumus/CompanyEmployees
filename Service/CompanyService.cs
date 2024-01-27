@@ -9,7 +9,7 @@ using Shared.DataTransferObjects;
 
 namespace Service;
 
-public class CompanyService(IRepositoryManager repository, ILoggerManager logger, IMapper mapper) : ICompanyService
+public class CompanyService(IRepositoryManager repository, IMapper mapper) : ICompanyService
 {
     public async Task<IEnumerable<CompanyDto>> GetCompaniesAsync(bool trackChanges)
     {
@@ -62,6 +62,13 @@ public class CompanyService(IRepositoryManager repository, ILoggerManager logger
        await repository.SaveAsync();
     }
 
+    public async Task UpdateCompanyAsync(Guid id, CompanyForUpdateDto companyForUpdateDto, bool trackChanges)
+    {
+        var company = await GetCompanyIfExists(id,trackChanges);
+        mapper.Map(companyForUpdateDto, company);
+        await repository.SaveAsync();
+    }
+
     private async Task<Company> GetCompanyIfExists(Guid companyId, bool trackChanges)
     {
         var company = await repository.CompanyRepository.GetCompanyAsync(companyId, trackChanges);
@@ -70,12 +77,5 @@ public class CompanyService(IRepositoryManager repository, ILoggerManager logger
             throw new CompanyNotFoundException(companyId);
         }
         return company;
-    }
-
-    public async Task UpdateCompanyAsync(Guid id, CompanyForUpdateDto companyForUpdateDto, bool trackChanges)
-    {
-        var company = await GetCompanyIfExists(id,trackChanges);
-        mapper.Map(companyForUpdateDto, company);
-        await repository.SaveAsync();
     }
 }

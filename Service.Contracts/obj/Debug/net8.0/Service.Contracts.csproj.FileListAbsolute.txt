@@ -14,3 +14,5 @@
 /Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/refint/Service.Contracts.dll
 /Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/Service.Contracts.pdb
 /Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/obj/Debug/net8.0/ref/Service.Contracts.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/bin/Debug/net8.0/Entities.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Service.Contracts/bin/Debug/net8.0/Entities.pdb

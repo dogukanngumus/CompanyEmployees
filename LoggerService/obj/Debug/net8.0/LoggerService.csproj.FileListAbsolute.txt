@@ -16,3 +16,5 @@
 /Users/dogukngumus/Projects/CompanyEmployees/LoggerService/obj/Debug/net8.0/LoggerService.sourcelink.json
 /Users/dogukngumus/Projects/CompanyEmployees/LoggerService/bin/Debug/net8.0/Entities.dll
 /Users/dogukngumus/Projects/CompanyEmployees/LoggerService/bin/Debug/net8.0/Entities.pdb
+/Users/dogukngumus/Projects/CompanyEmployees/LoggerService/bin/Debug/net8.0/Shared.dll
+/Users/dogukngumus/Projects/CompanyEmployees/LoggerService/bin/Debug/net8.0/Shared.pdb

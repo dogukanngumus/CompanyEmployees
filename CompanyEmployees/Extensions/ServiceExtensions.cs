@@ -3,6 +3,7 @@ using LoggerService;
 using Repositories;
 using Service;
 using Service.Contracts;
+using Shared.DataTransferObjects;
 
 namespace CompanyEmployees.Extensions;
 
@@ -14,6 +15,7 @@ public static class ServiceExtensions
             cfg.AllowAnyHeader();
             cfg.AllowAnyMethod();
             cfg.AllowAnyOrigin();
+            cfg.WithExposedHeaders("X-Pagination");
         });
     });
 
@@ -37,6 +39,9 @@ public static class ServiceExtensions
 
     public static void ConfigureExceptionHandler(this IServiceCollection services)
     => services.AddExceptionHandler<GlobalExceptionHandler>();
+
+    public static void ConfigureDataShaper(this IServiceCollection services)
+    => services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
 
     public static IMvcBuilder AddCustomCsvFormatter(this IMvcBuilder builder)
     => builder.AddMvcOptions(options=> options.OutputFormatters.Add(new CustomCsvOutputFormatter()));

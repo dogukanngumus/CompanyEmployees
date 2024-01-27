@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "IC6ttyISR4KfD+3QLtUKygWItexP3yjC6f6eOs5b8wpolJFebDqtwAwMFYDjVqA/20oMLrMChhfsFHR7m++27w==",
+  "dgSpecHash": "+i1qgEQCrsbAhMpZhfV6RYJeM5/I1L+XWHzY7kHfa/X8KfsunuvHkguhglgjM6nv7QAzWl1mkrp6Yn6/kG7Lkw==",
   "success": true,
   "projectFilePath": "/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/CompanyEmployees.Presentation.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/dogukngumus/.nuget/packages/microsoft.aspnetcore.jsonpatch/8.0.1/microsoft.aspnetcore.jsonpatch.8.0.1.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/8.0.1/microsoft.aspnetcore.mvc.newtonsoftjson.8.0.1.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

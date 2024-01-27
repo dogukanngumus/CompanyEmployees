@@ -16,3 +16,5 @@
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/Shared.pdb
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.csproj.AssemblyReference.cache
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/obj/Debug/net8.0/CompanyEmployees.Presentation.csproj.CopyComplete
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/Entities.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees.Presentation/bin/Debug/net8.0/Entities.pdb

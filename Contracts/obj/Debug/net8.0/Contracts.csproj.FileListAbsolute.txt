@@ -14,3 +14,5 @@
 /Users/dogukngumus/Projects/CompanyEmployees/Contracts/bin/Debug/net8.0/Entities.pdb
 /Users/dogukngumus/Projects/CompanyEmployees/Contracts/obj/Debug/net8.0/Contracts.csproj.AssemblyReference.cache
 /Users/dogukngumus/Projects/CompanyEmployees/Contracts/obj/Debug/net8.0/Contracts.csproj.CopyComplete
+/Users/dogukngumus/Projects/CompanyEmployees/Contracts/bin/Debug/net8.0/Shared.dll
+/Users/dogukngumus/Projects/CompanyEmployees/Contracts/bin/Debug/net8.0/Shared.pdb
