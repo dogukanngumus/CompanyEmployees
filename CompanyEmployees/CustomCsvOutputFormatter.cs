@@ -1,6 +1,8 @@
-﻿using System.Text;
+﻿using System.Dynamic;
+using System.Reflection;
+using System.Text;
 using Microsoft.AspNetCore.Mvc.Formatters;
-using Shared;
+using Shared.DataTransferObjects;
 
 namespace CompanyEmployees;
 
@@ -14,7 +16,7 @@ public class CustomCsvOutputFormatter : TextOutputFormatter
     }
     protected override bool CanWriteType(Type? type)
     {
-        if(typeof(IEnumerable<CompanyDto>).IsAssignableFrom(type) || typeof(CompanyDto).IsAssignableFrom(type))
+        if(typeof(IEnumerable<IDto>).IsAssignableFrom(type) || typeof(IDto).IsAssignableFrom(type))
         {
             return true;
         }
@@ -23,24 +25,26 @@ public class CustomCsvOutputFormatter : TextOutputFormatter
     public override async Task WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
     {
         var response = context.HttpContext.Response;
+        
         StringBuilder buffer = new StringBuilder();
-        if(context.Object is IEnumerable<CompanyDto>)
-        {
-            foreach (var company in (IEnumerable<CompanyDto>)context.Object)
+        if(context.Object is IEnumerable<object> enumerableObjects)
+        {    
+            foreach(var item in enumerableObjects)
             {
-                FormatCsv(buffer, company);
-            }
+                FormatCsv(buffer, item);
+            }       
         }
         else
         {
-             FormatCsv(buffer, (CompanyDto)context.Object);
+            FormatCsv(buffer, context.Object);
         }
 
         await response.WriteAsync(buffer.ToString());
     }
 
-    private static void FormatCsv(StringBuilder buffer, CompanyDto company)
-    {
-        buffer.AppendLine($"{company.Id},\"{company.Name},\"{company.FullAddress}\"");
+    private void FormatCsv(StringBuilder buffer, object item){
+        var typeOfObject = item.GetType();
+        var result = typeOfObject.GetProperties().Select(x=> x.GetValue(item)).ToList();
+        buffer.AppendLine(String.Join(',',result));
     }
 }

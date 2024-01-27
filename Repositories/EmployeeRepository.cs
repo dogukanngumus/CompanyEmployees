@@ -11,4 +11,13 @@ public class EmployeeRepository(RepositoryContext context) : RepositoryBase<Empl
 
     public async Task<IEnumerable<Employee>> GetEmployeesAsync(Guid companyId, bool trackChanges)
     => await FindByCondition(e=> e.CompanyId.Equals(companyId), trackChanges).OrderBy(e=> e.Name).ToListAsync();
+
+    public void CreateEmployee(Guid companyId, Employee employee)
+    {
+        employee.CompanyId = companyId;
+        Create(employee);
+    } 
+
+    public void DeleteEmployee(Employee employee)
+    => Delete(employee);
 }

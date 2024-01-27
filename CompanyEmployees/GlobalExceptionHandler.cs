@@ -16,6 +16,7 @@ public class GlobalExceptionHandler(ILoggerManager logger) : IExceptionHandler
          logger.LogError($"There is an error in your application. {exception}");
          httpContext.Response.StatusCode = exception switch{
             NotFoundException => StatusCodes.Status404NotFound,
+            BadRequestException => StatusCodes.Status400BadRequest,
             _ => StatusCodes.Status500InternalServerError
          };
          await httpContext.Response.WriteAsync(new ErrorModel{

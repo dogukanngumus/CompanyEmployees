@@ -4,7 +4,7 @@ using Entities;
 using Entities.Exceptions;
 using Entities.Models;
 using Service.Contracts;
-using Shared;
+using Shared.DataTransferObjects;
 
 namespace Service;
 
@@ -25,6 +25,17 @@ public class EmployeeService(IRepositoryManager repository, ILoggerManager logge
         return mapper.Map<IEnumerable<EmployeeDto>>(employees);
     }
 
+    public  async Task<EmployeeDto> CreateEmployeeAsync(Guid companyId, EmployeeForCreationDto employeeForCreationDto, bool trackChanges)
+    {
+       await CheckCompanyExists(companyId, trackChanges);
+       var employee = mapper.Map<Employee>(employeeForCreationDto);
+       
+       repository.EmployeeRepository.CreateEmployee(companyId, employee);
+       await repository.SaveAsync();
+
+       return mapper.Map<EmployeeDto>(employee);
+    }
+
     private async Task CheckCompanyExists(Guid companyId, bool trackChanges)
     {
        var company = await repository.CompanyRepository.GetCompanyAsync(companyId, trackChanges);
@@ -42,5 +53,22 @@ public class EmployeeService(IRepositoryManager repository, ILoggerManager logge
           throw new EmployeeNotFoundException(employeeId);
        }
        return employee;
+    }
+
+    public async Task DeleteEmployeeAsync(Guid companyId, Guid employeeId, bool trackChanges)
+    {
+       await CheckCompanyExists(companyId,trackChanges);
+       var employee = await GetEmployeeIfExists(companyId,employeeId,trackChanges);
+
+       repository.EmployeeRepository.DeleteEmployee(employee);
+       await repository.SaveAsync();
+    }
+
+    public async Task UpdateEmployeeAsync(Guid companyId, Guid employeeId, EmployeeForUpdateDto employeeForUpdateDto, bool companyTrackChanges, bool employeeTrackChanges)
+    {
+        await CheckCompanyExists(companyId,companyTrackChanges);
+        var employee = await GetCompanyEmployeeAsync(companyId,employeeId,employeeTrackChanges);
+        mapper.Map(employeeForUpdateDto, employee);
+        await repository.SaveAsync();
     }
 }

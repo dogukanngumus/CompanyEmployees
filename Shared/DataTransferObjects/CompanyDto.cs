@@ -1,6 +1,6 @@
-﻿namespace Shared;
+﻿namespace Shared.DataTransferObjects;
 
-public record class CompanyDto
+public record class CompanyDto : IDto
 {
    public Guid Id { get; set; }
    public string? Name { get; set; }

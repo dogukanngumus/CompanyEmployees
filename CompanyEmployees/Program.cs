@@ -1,6 +1,7 @@
 using CompanyEmployees.Extensions;
 using CompanyEmployees.Presentation;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Mvc;
 using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,10 @@ builder.Services.AddControllers(options=>{
 .AddXmlDataContractSerializerFormatters()
 .AddCustomCsvFormatter()
 .AddApplicationPart(typeof(AssemblyReference).Assembly);
+
+builder.Services.Configure<ApiBehaviorOptions>(options=>{
+    options.SuppressModelStateInvalidFilter = true;
+});
 
 #region Configurations
 LogManager.Setup().LoadConfigurationFromFile();
