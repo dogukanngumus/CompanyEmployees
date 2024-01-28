@@ -1,4 +1,5 @@
-﻿using Asp.Versioning;
+﻿using System.Threading.RateLimiting;
+using Asp.Versioning;
 using CompanyEmployees.Presentation;
 using CompanyEmployees.Presentation.Controllers;
 using CompanyEmployees.Utility;
@@ -97,6 +98,41 @@ public static class ServiceExtensions
             opt.Conventions.Controller<CompaniesController>().HasApiVersion(new ApiVersion(1,0));
             opt.Conventions.Controller<EmployeesController>().HasApiVersion(new ApiVersion(1,0));
             opt.Conventions.Controller<CompaniesV2Controller>().HasDeprecatedApiVersion(new ApiVersion(2,0));
+        });
+    }
+
+    public static void ConfigureRateLimitingOptions(this IServiceCollection services)
+    {
+        services.AddRateLimiter(opt =>
+        {
+            opt.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(context
+            => RateLimitPartition.GetFixedWindowLimiter("GlobalLimiter",partition => new FixedWindowRateLimiterOptions
+            {
+                AutoReplenishment = true,
+                PermitLimit = 5,
+                QueueLimit = 0,
+                Window = TimeSpan.FromMinutes(1)
+            }));
+            opt.OnRejected = async (context, token) =>
+            {
+                context.HttpContext.Response.StatusCode = 429;
+                if (context.Lease.TryGetMetadata(MetadataName.RetryAfter, out var retryAfter)){
+                    await context.HttpContext.Response.WriteAsync($"Too many requests. Please try again after {retryAfter.TotalSeconds} second(s).", token);
+                }            
+                else
+                {
+                    await context.HttpContext.Response.WriteAsync("Too many requests. Please try again later.", token);
+                };
+            };
+
+            opt.AddPolicy("SpecificPolicy", context => RateLimitPartition.GetFixedWindowLimiter("SpecificLimiter",
+            partition => new FixedWindowRateLimiterOptions
+            {
+                AutoReplenishment = true,
+                PermitLimit = 3,
+                Window = TimeSpan.FromSeconds(10)
+            }));
+
         });
     }
 }

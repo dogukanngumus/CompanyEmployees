@@ -39,6 +39,7 @@ builder.Services.ConfigureDataShaper();
 builder.Services.ConfigureEmployeeLinks();
 builder.Services.ConfigureVersioning();
 builder.Services.ConfigureOutputCaching();
+builder.Services.ConfigureRateLimitingOptions();
 builder.Services.AddCustomMediaTypes();
 builder.Services.AddScoped<ValidationFilterAttribute>();
 builder.Services.AddScoped<ValidateMediaTypeAttribute>();
@@ -54,6 +55,7 @@ app.UseStaticFiles();
 app.UseForwardedHeaders(new ForwardedHeadersOptions(){
     ForwardedHeaders = ForwardedHeaders.All
 });
+app.UseRateLimiter();
 app.UseCors("CorsPolicy");
 app.UseOutputCache();
 
