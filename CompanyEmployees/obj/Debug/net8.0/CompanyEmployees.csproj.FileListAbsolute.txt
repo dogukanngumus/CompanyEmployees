@@ -163,3 +163,6 @@
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/System.Linq.Dynamic.Core.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Asp.Versioning.Abstractions.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Asp.Versioning.Http.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Asp.Versioning.Mvc.dll

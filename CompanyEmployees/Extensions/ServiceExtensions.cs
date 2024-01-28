@@ -1,4 +1,7 @@
-﻿using CompanyEmployees.Utility;
+﻿using Asp.Versioning;
+using CompanyEmployees.Presentation;
+using CompanyEmployees.Presentation.Controllers;
+using CompanyEmployees.Utility;
 using Contracts;
 using LoggerService;
 using Microsoft.AspNetCore.Mvc;
@@ -52,6 +55,11 @@ public static class ServiceExtensions
     public static IMvcBuilder AddCustomCsvFormatter(this IMvcBuilder builder)
     => builder.AddMvcOptions(options=> options.OutputFormatters.Add(new CustomCsvOutputFormatter()));
 
+    public static void ConfigureOutputCaching(this IServiceCollection services)
+    => services.AddOutputCache(opt=>{
+        opt.AddPolicy("120SecondsDuration", p => p.Expire(TimeSpan.FromSeconds(120)));
+    });
+
     public static void AddCustomMediaTypes(this IServiceCollection services )
     {
         services.Configure<MvcOptions>(config =>
@@ -74,6 +82,21 @@ public static class ServiceExtensions
                 xmlOutputFormatter.SupportedMediaTypes
                 .Add("application/vnd.companyemployees.hateoas+xml");
             }
+        });
+    }
+
+    public static void ConfigureVersioning(this IServiceCollection services)
+    {
+        services.AddApiVersioning(opt =>
+        {
+            opt.ReportApiVersions = true;
+            opt.AssumeDefaultVersionWhenUnspecified = true;
+            opt.DefaultApiVersion = new ApiVersion(1, 0);
+            opt.ApiVersionReader = new HeaderApiVersionReader("api-version");
+        }).AddMvc(opt=>{
+            opt.Conventions.Controller<CompaniesController>().HasApiVersion(new ApiVersion(1,0));
+            opt.Conventions.Controller<EmployeesController>().HasApiVersion(new ApiVersion(1,0));
+            opt.Conventions.Controller<CompaniesV2Controller>().HasDeprecatedApiVersion(new ApiVersion(2,0));
         });
     }
 }

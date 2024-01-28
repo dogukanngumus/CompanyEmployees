@@ -1,5 +1,6 @@
 ﻿using CompanyEmployees.Presentation.ModelBindings;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 using Service.Contracts;
 using Shared;
 using Shared.DataTransferObjects;
@@ -12,9 +13,12 @@ public class CompaniesController(IServiceManager service) : ControllerBase
 {
    [HttpGet]
    [HttpHead]
+   [OutputCache(PolicyName ="120SecondsDuration")]
    public async Task<IActionResult> GetCompanies()
    {
       var companies =  await service.CompanyService.GetCompaniesAsync(false);
+      var etag = $"\"{Guid.NewGuid():n}\"";
+      HttpContext.Response.Headers.ETag = etag;
       return Ok(companies);
    }
 

@@ -37,6 +37,8 @@ builder.Services.ConfigureAutoMapper();
 builder.Services.ConfigureExceptionHandler();
 builder.Services.ConfigureDataShaper();
 builder.Services.ConfigureEmployeeLinks();
+builder.Services.ConfigureVersioning();
+builder.Services.ConfigureOutputCaching();
 builder.Services.AddCustomMediaTypes();
 builder.Services.AddScoped<ValidationFilterAttribute>();
 builder.Services.AddScoped<ValidateMediaTypeAttribute>();
@@ -53,6 +55,7 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions(){
     ForwardedHeaders = ForwardedHeaders.All
 });
 app.UseCors("CorsPolicy");
+app.UseOutputCache();
 
 app.MapControllers();
 app.Run();

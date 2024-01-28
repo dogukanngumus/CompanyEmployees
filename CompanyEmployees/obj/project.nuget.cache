@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7taWMjdGrQWfU6O8TIGGkhpIi5AveOZx+2o85Ithea/49tYW3JRD8zuR+TDaiQ8gNoO5ekR16hpOvHcIH6cT5g==",
+  "dgSpecHash": "1V41VhmEmOl5cIa/Ue2OZYWpmzH1nwFx0RaBSawAwqV+KnxAb/Ou8xGmnIoQKtDe4Q+aEoco/fB2jBla/ue3yA==",
   "success": true,
   "projectFilePath": "/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/CompanyEmployees.csproj",
   "expectedPackageFiles": [
+    "/Users/dogukngumus/.nuget/packages/asp.versioning.abstractions/8.0.0/asp.versioning.abstractions.8.0.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/asp.versioning.http/8.0.0/asp.versioning.http.8.0.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/asp.versioning.mvc/8.0.0/asp.versioning.mvc.8.0.0.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
