@@ -34,6 +34,15 @@ public class AuthenticationController(IServiceManager service) : ControllerBase
              return Unauthorized();
         }
            
-        return Ok(new { Token = await service.AuthenticationService.CreateToken() });
+        var tokenDto = await service.AuthenticationService .CreateToken(populateExp: true);
+        return Ok(tokenDto);
+    }
+
+    [HttpPost("refresh")]
+    [ServiceFilter(typeof(ValidationFilterAttribute))]
+    public async Task<IActionResult> Refresh([FromBody]TokenDto tokenDto)
+    {
+        var tokenDtoToReturn = await service.AuthenticationService.RefreshToken(tokenDto);
+        return Ok(tokenDtoToReturn);
     }
 }

@@ -46,6 +46,7 @@ builder.Services.AddScoped<ValidateMediaTypeAttribute>();
 builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJWT(builder.Configuration);
+builder.Services.AddJwtConfiguration(builder.Configuration);
 #endregion
 
 var app = builder.Build();
