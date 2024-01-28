@@ -36,7 +36,10 @@ builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.ConfigureAutoMapper();
 builder.Services.ConfigureExceptionHandler();
 builder.Services.ConfigureDataShaper();
+builder.Services.ConfigureEmployeeLinks();
+builder.Services.AddCustomMediaTypes();
 builder.Services.AddScoped<ValidationFilterAttribute>();
+builder.Services.AddScoped<ValidateMediaTypeAttribute>();
 #endregion
 
 var app = builder.Build();

@@ -10,7 +10,7 @@ using System.Dynamic;
 
 namespace Service;
 
-public class EmployeeService(IRepositoryManager repository, IDataShaper<EmployeeDto> dataShaper, IMapper mapper) : IEmployeeService
+public class EmployeeService(IRepositoryManager repository, IEmployeeLinks employeeLinks, IMapper mapper) : IEmployeeService
 {
     public async Task<EmployeeDto> GetCompanyEmployeeAsync(Guid companyId, Guid employeeId, bool trackChanges)
     {
@@ -20,8 +20,9 @@ public class EmployeeService(IRepositoryManager repository, IDataShaper<Employee
        return employeeDtos;
     }
 
-    public async Task<(IEnumerable<ExpandoObject> employees, MetaData metaData)> GetCompanyEmployeesAsync(Guid companyId, EmployeeParameters employeeParameters ,bool trackChanges)
+    public async Task<(LinkResponse linkResponse, MetaData metaData)> GetCompanyEmployeesAsync(Guid companyId, LinkParameters linkParameters ,bool trackChanges)
     {
+       var employeeParameters = linkParameters.EmployeeParameters;
         if (!employeeParameters.ValidAgeRange)
         {
           throw new MaxAgeRangeBadRequestException();
@@ -30,8 +31,8 @@ public class EmployeeService(IRepositoryManager repository, IDataShaper<Employee
         await CheckCompanyExists(companyId, trackChanges);
         var employees = await repository.EmployeeRepository.GetEmployeesAsync(companyId, employeeParameters ,trackChanges);
         var employeeDtos = mapper.Map<IEnumerable<EmployeeDto>>(employees);
-        var shapedData = dataShaper.GetShapedEntities(employeeDtos, employeeParameters.Fields);
-        return (shapedData,employees.MetaData);
+        var linkResponse = employeeLinks.TryGenerateLinks(employeeDtos, employeeParameters.Fields, companyId, linkParameters.Context);
+        return (linkResponse,employees.MetaData);
     }
 
     public  async Task<EmployeeDto> CreateEmployeeAsync(Guid companyId, EmployeeForCreationDto employeeForCreationDto, bool trackChanges)

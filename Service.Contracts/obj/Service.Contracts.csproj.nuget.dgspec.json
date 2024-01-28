@@ -25,7 +25,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/dogukngumus/Projects/CompanyEmployees/Shared/Shared.csproj": {
+                "projectPath": "/Users/dogukngumus/Projects/CompanyEmployees/Shared/Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -49,6 +53,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

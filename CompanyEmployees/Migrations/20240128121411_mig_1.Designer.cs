@@ -12,7 +12,7 @@ using Repositories;
 namespace CompanyEmployees.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240125175728_mig_1")]
+    [Migration("20240128121411_mig_1")]
     partial class mig_1
     {
         /// <inheritdoc />
