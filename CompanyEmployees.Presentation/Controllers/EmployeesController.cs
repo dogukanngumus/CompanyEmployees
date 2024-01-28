@@ -11,6 +11,7 @@ namespace CompanyEmployees.Presentation.Controllers;
 
 [Route("api/companies/{companyId:guid}/employees")]
 [ApiController]
+[ApiExplorerSettings(GroupName = "v1")]
 public class EmployeesController(IServiceManager service) : ControllerBase
 {
      [HttpGet(Name = "GetEmployeesForCompany")]

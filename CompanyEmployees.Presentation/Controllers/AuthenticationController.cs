@@ -7,6 +7,7 @@ namespace CompanyEmployees.Presentation.Controllers;
 
 [Route("api/authentication")]
 [ApiController]
+[ApiExplorerSettings(GroupName = "v1")]
 public class AuthenticationController(IServiceManager service) : ControllerBase
 {
     [HttpPost]

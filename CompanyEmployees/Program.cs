@@ -47,6 +47,7 @@ builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJWT(builder.Configuration);
 builder.Services.AddJwtConfiguration(builder.Configuration);
+builder.Services.ConfigureSwagger();
 #endregion
 
 var app = builder.Build();
@@ -59,7 +60,11 @@ if(app.Environment.IsProduction())
 }
 else
 {
-   // swagger
+   app.UseSwagger();
+   app.UseSwaggerUI(opt=>{
+        opt.SwaggerEndpoint("/swagger/v1/swagger.json", "CompanyEmployees API v1");
+        opt.SwaggerEndpoint("/swagger/v2/swagger.json", "CompanyEmployees API v2");
+   });
 }
 app.UseHttpsRedirection();
 
