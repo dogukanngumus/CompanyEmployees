@@ -11,6 +11,7 @@ namespace CompanyEmployees.Presentation.Controllers;
 public class CompaniesController(IServiceManager service) : ControllerBase
 {
    [HttpGet]
+   [HttpHead]
    public async Task<IActionResult> GetCompanies()
    {
       var companies =  await service.CompanyService.GetCompaniesAsync(false);
@@ -57,5 +58,12 @@ public class CompaniesController(IServiceManager service) : ControllerBase
    {
       await service.CompanyService.UpdateCompanyAsync(id, companyForUpdateDto, true);
       return NoContent();
+   }
+
+   [HttpOptions]
+   public IActionResult GetCompaniesOptions()
+   {
+      Response.Headers.Add("Allow", "GET, OPTIONS, POST, PUT, DELETE");
+      return Ok();
    }
 }
