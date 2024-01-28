@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Contracts;
-using Entities;
+using Entities.Responses;
 using Entities.Exceptions;
 using Entities.Models;
 using Service.Contracts;
@@ -11,18 +11,22 @@ namespace Service;
 
 public class CompanyService(IRepositoryManager repository, IMapper mapper) : ICompanyService
 {
-    public async Task<IEnumerable<CompanyDto>> GetCompaniesAsync(bool trackChanges)
+    public async Task<ApiBaseResponse> GetCompaniesAsync(bool trackChanges)
     {
        var companies = await repository.CompanyRepository.GetCompaniesAsync(trackChanges);
        var companyDtos = mapper.Map<IEnumerable<CompanyDto>>(companies);
-       return companyDtos;
+       return new ApiOkResponse<IEnumerable<CompanyDto>>(companyDtos);
     }
 
-    public async Task<CompanyDto> GetCompanyAsync(Guid companyId, bool trackChanges)
+    public  async Task<ApiBaseResponse> GetCompanyAsync(Guid companyId, bool trackChanges)
     {
-        var company = await GetCompanyIfExists(companyId, trackChanges);
+        var company = await repository.CompanyRepository.GetCompanyAsync(companyId, trackChanges);
+        if(company is null)
+        {
+            return new CompanyNotFoundResponse(companyId);
+        }
         var companyDto = mapper.Map<CompanyDto>(company);
-        return companyDto;
+        return new ApiOkResponse<CompanyDto>(companyDto);
     }
 
     public async Task<CompanyDto> CreateCompanyAsync(CompanyForCreationDto companyForCreationDto)

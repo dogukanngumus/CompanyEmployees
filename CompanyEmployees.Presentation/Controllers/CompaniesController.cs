@@ -1,4 +1,5 @@
 ﻿using CompanyEmployees.Presentation.ModelBindings;
+using Entities.Responses;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
@@ -11,7 +12,7 @@ namespace CompanyEmployees.Presentation.Controllers;
 [Route("api/companies")]
 [ApiController]
 [ApiExplorerSettings(GroupName = "v1")]
-public class CompaniesController(IServiceManager service) : ControllerBase
+public class CompaniesController(IServiceManager service) : ApiControllerBase
 {
    [Authorize(Roles ="Manager")]
    [HttpGet]
@@ -19,7 +20,8 @@ public class CompaniesController(IServiceManager service) : ControllerBase
    [OutputCache(PolicyName ="120SecondsDuration")]
    public async Task<IActionResult> GetCompanies()
    {
-      var companies =  await service.CompanyService.GetCompaniesAsync(false);
+      var baseResult =  await service.CompanyService.GetCompaniesAsync(false);
+      var companies = ApiBaseResponseExtensions.GetResult<IEnumerable<CompanyDto>>(baseResult);
       var etag = $"\"{Guid.NewGuid():n}\"";
       HttpContext.Response.Headers.ETag = etag;
       return Ok(companies);
@@ -28,7 +30,12 @@ public class CompaniesController(IServiceManager service) : ControllerBase
    [HttpGet("{id:guid}", Name = "CompanyById")]
    public async Task<IActionResult> GetCompany([FromRoute] Guid id)
    {
-      var company = await service.CompanyService.GetCompanyAsync(id,false);
+      var baseResult = await service.CompanyService.GetCompanyAsync(id,false);
+      if(!baseResult.Success)
+      {
+         return ProcessError(baseResult);
+      }
+      var company = ApiBaseResponseExtensions.GetResult<CompanyDto>(baseResult);
       return Ok(company);
    }
 
