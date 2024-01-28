@@ -53,6 +53,14 @@ var app = builder.Build();
 
 app.UseExceptionHandler(options=>{});
 
+if(app.Environment.IsProduction())
+{
+    app.UseHsts();
+}
+else
+{
+   // swagger
+}
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();

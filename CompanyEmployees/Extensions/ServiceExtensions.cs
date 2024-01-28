@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Repositories;
 using Service;
 using Service.Contracts;
@@ -183,4 +184,5 @@ public static class ServiceExtensions
     {
         services.Configure<JwtConfiguration>(configuration.GetSection("JwtSettings"));
     }
+
 }
