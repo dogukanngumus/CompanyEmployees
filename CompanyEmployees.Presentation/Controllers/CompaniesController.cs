@@ -1,4 +1,5 @@
 ﻿using CompanyEmployees.Presentation.ModelBindings;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
 using Service.Contracts;
@@ -11,6 +12,7 @@ namespace CompanyEmployees.Presentation.Controllers;
 [ApiController]
 public class CompaniesController(IServiceManager service) : ControllerBase
 {
+   [Authorize(Roles ="Manager")]
    [HttpGet]
    [HttpHead]
    [OutputCache(PolicyName ="120SecondsDuration")]

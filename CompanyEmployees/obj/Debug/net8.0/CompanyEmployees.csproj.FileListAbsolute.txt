@@ -172,3 +172,4 @@
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.Extensions.Identity.Core.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Yitsn7cZb3xMJRjfCp0yKvP3L2CeQx0p72NgkKaobzfBAgOFRoTuwX0G+UNl8lNUnfQEDIsdbmEZVxw9oYPrSw==",
+  "dgSpecHash": "pUFJvCpBn69AMbOnp8zU4HFG+GzCLq8KhEH7Z8W13xf3kdrmSJKsCp3qKhPobCDkY/okGRHaMCXMK0j3Yitmqg==",
   "success": true,
   "projectFilePath": "/Users/dogukngumus/Projects/CompanyEmployees/Service/Service.csproj",
   "expectedPackageFiles": [
@@ -24,7 +24,12 @@
     "/Users/dogukngumus/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/dogukngumus/.nuget/packages/microsoft.extensions.options/8.0.1/microsoft.extensions.options.8.0.1.nupkg.sha512",
-    "/Users/dogukngumus/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    "/Users/dogukngumus/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.identitymodel.abstractions/7.2.0/microsoft.identitymodel.abstractions.7.2.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.2.0/microsoft.identitymodel.jsonwebtokens.7.2.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.identitymodel.logging/7.2.0/microsoft.identitymodel.logging.7.2.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/microsoft.identitymodel.tokens/7.2.0/microsoft.identitymodel.tokens.7.2.0.nupkg.sha512",
+    "/Users/dogukngumus/.nuget/packages/system.identitymodel.tokens.jwt/7.2.0/system.identitymodel.tokens.jwt.7.2.0.nupkg.sha512"
   ],
   "logs": []
 }
