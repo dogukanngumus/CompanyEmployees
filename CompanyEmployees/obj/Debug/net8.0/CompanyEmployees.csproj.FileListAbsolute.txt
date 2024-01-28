@@ -166,3 +166,9 @@
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Asp.Versioning.Abstractions.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Asp.Versioning.Http.dll
 /Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Asp.Versioning.Mvc.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.Extensions.Identity.Core.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/dogukngumus/Projects/CompanyEmployees/CompanyEmployees/bin/Debug/net8.0/Microsoft.Extensions.Options.dll

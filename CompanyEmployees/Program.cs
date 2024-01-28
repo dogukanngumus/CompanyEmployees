@@ -43,6 +43,8 @@ builder.Services.ConfigureRateLimitingOptions();
 builder.Services.AddCustomMediaTypes();
 builder.Services.AddScoped<ValidationFilterAttribute>();
 builder.Services.AddScoped<ValidateMediaTypeAttribute>();
+builder.Services.AddAuthentication();
+builder.Services.ConfigureIdentity();
 #endregion
 
 var app = builder.Build();
@@ -58,6 +60,9 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions(){
 app.UseRateLimiter();
 app.UseCors("CorsPolicy");
 app.UseOutputCache();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 app.Run();
